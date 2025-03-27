@@ -9,12 +9,15 @@ variable "environment" {
   default = "dev"
 }
 
+variable "testttttttttttttt" {
+  default = "dev"
+}
+
 locals {
   resource_prefix = {
     value = "${data.aws_caller_identity.current.account_id}-${var.company_name}-${var.environment}"
   }
 }
-
 
 
 variable "profile" {
