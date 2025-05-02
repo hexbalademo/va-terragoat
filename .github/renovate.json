@@ -1,3 +1,12 @@
 {
-  "extends": ["github>superseb-demos/renovate-config"]
+  "extends": ["config:base"],
+  "automerge": true,
+  "dependencyDashboard": true,
+  "schedule": ["after 10pm every weekday", "before 5am every weekday"],
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
 }
