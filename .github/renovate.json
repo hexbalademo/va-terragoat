@@ -1,12 +1,32 @@
 {
   "extends": ["config:base"],
-  "automerge": true,
   "dependencyDashboard": true,
-  "schedule": ["after 10pm every weekday", "before 5am every weekday"],
+  "automerge": false,
+  "enabledManagers": [
+    "terraform",
+    "github-actions",
+    "npm",
+    "pip",
+    "dockerfile",
+    "maven",
+    "gradle"
+  ],
   "packageRules": [
     {
-      "updateTypes": ["minor", "patch"],
-      "automerge": true
+      "matchManagers": ["terraform"],
+      "enabled": true
+    },
+    {
+      "matchManagers": ["npm", "pip", "dockerfile", "github-actions"],
+      "enabled": true
+    },
+    {
+      "matchManagers": ["maven", "gradle"],
+      "enabled": true,
+      "groupName": "Java dependencies",
+      "schedule": ["before 4am on monday"]
     }
-  ]
+  ],
+  "schedule": ["every day at 3am"],
+  "labels": ["dependencies", "renovate"]
 }
