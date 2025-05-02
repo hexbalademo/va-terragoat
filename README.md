@@ -1,10 +1,10 @@
-# TerraGoat - Vulnerable Terraform Infrastructure
+Vulnerable Terraform Infrastructure for Demo
 
 
 
 
 TerraGoat is HEXCODE's "Vulnerable by Design" Terraform repository.
-![Terragoat](terragoat-logo.png)
+![Terragoat](terragoat-logo1.png)
 
 TerraGoat is HEXCODE's "Vulnerable by Design" Terraform repository.
 TerraGoat is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments.
